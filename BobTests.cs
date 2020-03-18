@@ -7,7 +7,15 @@ public class BobTests
     [Fact]
     public void Stating_something()
     {
-        Assert.Equal("Whatever.", Bob.Response("Tom-ay-to, tom-aaaah-to."));
+        //Arrange
+        string statement = "TTom-ay-to, tom-aaaah-to.";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whatever.", bobsResponse);
     }
 
     [Fact(Skip = "Remove to run test")]
