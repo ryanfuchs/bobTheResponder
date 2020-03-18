@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ryanfuchs\\Exercism\\csharp\\bob\\Bob.csproj": {}
+    "C:\\Users\\ryanfuchs\\Documents\\Visual Studio 2019\\bobTheResponder\\Bob.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ryanfuchs\\Exercism\\csharp\\bob\\Bob.csproj": {
+    "C:\\Users\\ryanfuchs\\Documents\\Visual Studio 2019\\bobTheResponder\\Bob.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ryanfuchs\\Exercism\\csharp\\bob\\Bob.csproj",
+        "projectUniqueName": "C:\\Users\\ryanfuchs\\Documents\\Visual Studio 2019\\bobTheResponder\\Bob.csproj",
         "projectName": "Bob",
-        "projectPath": "C:\\Users\\ryanfuchs\\Exercism\\csharp\\bob\\Bob.csproj",
+        "projectPath": "C:\\Users\\ryanfuchs\\Documents\\Visual Studio 2019\\bobTheResponder\\Bob.csproj",
         "packagesPath": "C:\\Users\\ryanfuchs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ryanfuchs\\Exercism\\csharp\\bob\\obj\\",
+        "outputPath": "C:\\Users\\ryanfuchs\\Documents\\Visual Studio 2019\\bobTheResponder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
