@@ -29,13 +29,21 @@ public class BobTests
         bobsResponse = Bob.Response(statement);
 
         //Assert
-        Assert.Equal("Whoa, chill out!", Bob.Response("WATCH OUT!"));
+        Assert.Equal("Whoa, chill out!", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Shouting_gibberish()
     {
-        Assert.Equal("Whoa, chill out!", Bob.Response("FCECDFCAAB"));
+        //Arrange
+        string statement = "FCECDFCAAB";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whoa, chill out!", bobsResponse);
     }
 
     [Fact(Skip = "Remove to run test")]

@@ -20,6 +20,14 @@ public static class Bob
             }
         }
 
+        if (bobsResponse == "")
+        {
+            if (statement == statement.ToUpper())
+            {
+                bobsResponse = "Whoa, chill out!";
+            }
+        }
+
         return bobsResponse;
     }
 }
