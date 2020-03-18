@@ -18,9 +18,17 @@ public class BobTests
         Assert.Equal("Whatever.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Shouting()
     {
+        //Arrange
+        string statement = "WATCH OUT!";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
         Assert.Equal("Whoa, chill out!", Bob.Response("WATCH OUT!"));
     }
 
