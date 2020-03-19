@@ -46,22 +46,46 @@ public class BobTests
         Assert.Equal("Whoa, chill out!", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Asking_a_question()
     {
-        Assert.Equal("Sure.", Bob.Response("Does this cryogenic chamber make me look fat?"));
+        //Arrange
+        string statement = "Does this cryogenic chamber make me look fat?";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Sure.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Asking_a_numeric_question()
     {
-        Assert.Equal("Sure.", Bob.Response("You are, what, like 15?"));
+        //Arrange
+        string statement = "You are, what, like 15?";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Sure.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Asking_gibberish()
     {
-        Assert.Equal("Sure.", Bob.Response("fffbbcbeab?"));
+        //Arrange
+        string statement = "fffbbcbeab?";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Sure.", bobsResponse);
     }
 
     [Fact(Skip = "Remove to run test")]

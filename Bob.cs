@@ -17,6 +17,10 @@ public static class Bob
                 case '!':
                     bobsResponse = "Whoa, chill out!";
                     break;
+
+                case '?':
+                    bobsResponse = "Sure.";
+                    break;
             }
         }
 
