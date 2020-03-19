@@ -94,16 +94,32 @@ public class BobTests
         Assert.Equal("Whatever.", Bob.Response("Hi there!"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Using_acronyms_in_regular_speech()
     {
-        Assert.Equal("Whatever.", Bob.Response("It's OK if you don't want to go work for NASA."));
+        //Arrange
+        string statement = "It's OK if you don't want to go work for NASA.";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whatever.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Forceful_question()
     {
-        Assert.Equal("Calm down, I know what I'm doing!", Bob.Response("WHAT'S GOING ON?"));
+        //Arrange
+        string statement = "WHAT'S GOING ON?";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Calm down, I know what I'm doing!", bobsResponse);
     }
 
     [Fact(Skip = "Remove to run test")]

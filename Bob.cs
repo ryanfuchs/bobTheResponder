@@ -19,7 +19,14 @@ public static class Bob
                     break;
 
                 case '?':
-                    bobsResponse = "Sure.";
+                    if (statement == statement.ToUpper())
+                    {
+                        bobsResponse = "Calm down, I know what I'm doing!";
+                    }
+                    else
+                    {
+                        bobsResponse = "Sure.";
+                    }
                     break;
             }
         }
