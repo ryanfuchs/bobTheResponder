@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 public static class Bob
 {
@@ -35,10 +36,27 @@ public static class Bob
         {
             if (statement == statement.ToUpper())
             {
-                bobsResponse = "Whoa, chill out!";
+                if (statementContainsNoLetters(statement))
+                {
+                    bobsResponse = "Whatever.";
+                }
+                else
+                {
+                    bobsResponse = "Whoa, chill out!";
+                }
             }
         }
 
         return bobsResponse;
+    }
+
+    private static bool statementContainsNoLetters(string statement)
+    {
+        if (statement.ToUpper() == statement.ToLower())
+        {
+            return true;
+        }
+
+        return false;
     }
 }

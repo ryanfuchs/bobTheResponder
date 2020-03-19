@@ -122,16 +122,32 @@ public class BobTests
         Assert.Equal("Calm down, I know what I'm doing!", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Shouting_numbers()
     {
-        Assert.Equal("Whoa, chill out!", Bob.Response("1, 2, 3 GO!"));
+        //Arrange
+        string statement = "1, 2, 3 GO!";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whoa, chill out!", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void No_letters()
     {
-        Assert.Equal("Whatever.", Bob.Response("1, 2, 3"));
+        //Arrange
+        string statement = "1, 2, 3";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whatever.", bobsResponse);
     }
 
     [Fact(Skip = "Remove to run test")]
