@@ -1,6 +1,8 @@
 using System;
 using System.Runtime.CompilerServices;
 
+using Microsoft.VisualBasic;
+
 public static class Bob
 {
     public static string Response(string statement)
@@ -20,7 +22,7 @@ public static class Bob
                     break;
 
                 case '?':
-                    if (statement == statement.ToUpper())
+                    if (statement == statement.ToUpper() && !statementContainsNoLetters(statement))
                     {
                         bobsResponse = "Calm down, I know what I'm doing!";
                     }

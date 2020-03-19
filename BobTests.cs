@@ -150,40 +150,88 @@ public class BobTests
         Assert.Equal("Whatever.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Question_with_no_letters()
     {
-        Assert.Equal("Sure.", Bob.Response("4?"));
+        //Arrange
+        string statement = "4?";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Sure.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Shouting_with_special_characters()
     {
-        Assert.Equal("Whoa, chill out!", Bob.Response("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"));
+        //Arrange
+        string statement = "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whoa, chill out!", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Shouting_with_no_exclamation_mark()
     {
-        Assert.Equal("Whoa, chill out!", Bob.Response("I HATE THE DENTIST"));
+        //Arrange
+        string statement = "I HATE THE DENTIST";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whoa, chill out!", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Statement_containing_question_mark()
     {
-        Assert.Equal("Whatever.", Bob.Response("Ending with ? means a question."));
+        //Arrange
+        string statement = "Ending with ? means a question.";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whatever.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Non_letters_with_question()
     {
-        Assert.Equal("Sure.", Bob.Response(":) ?"));
+        //Arrange
+        string statement = ":) ?";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Sure.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Prattling_on()
     {
-        Assert.Equal("Sure.", Bob.Response("Wait! Hang on. Are you going to be OK?"));
+        //Arrange
+        string statement = "Wait! Hang on. Are you going to be OK?";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Sure.", bobsResponse);
     }
 
     [Fact(Skip = "Remove to run test")]
