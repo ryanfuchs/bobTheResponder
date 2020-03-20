@@ -234,10 +234,18 @@ public class BobTests
         Assert.Equal("Sure.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Silence()
     {
-        Assert.Equal("Fine. Be that way!", Bob.Response(""));
+        //Arrange
+        string statement = "";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Fine. Be that way!", bobsResponse);
     }
 
     [Fact(Skip = "Remove to run test")]

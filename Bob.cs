@@ -34,7 +34,11 @@ public static class Bob
             }
         }
 
-        if (bobsResponse == "")
+        if (isStringEmpty(statement))
+        {
+            bobsResponse = "Fine. Be that way!";
+        }
+        else if(bobsResponse == "")
         {
             if (statement == statement.ToUpper())
             {
@@ -48,8 +52,17 @@ public static class Bob
                 }
             }
         }
-
         return bobsResponse;
+    }
+
+    private static bool isStringEmpty(string statement)
+    {
+        if (statement == "")
+        {
+            return true;
+        }
+
+        return false;
     }
 
     private static bool statementContainsNoLetters(string statement)
