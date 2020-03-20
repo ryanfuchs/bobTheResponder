@@ -248,28 +248,60 @@ public class BobTests
         Assert.Equal("Fine. Be that way!", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Prolonged_silence()
     {
-        Assert.Equal("Fine. Be that way!", Bob.Response("          "));
+        //Arrange
+        string statement = "          ";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Fine. Be that way!", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Alternate_silence()
     {
-        Assert.Equal("Fine. Be that way!", Bob.Response("\t\t\t\t\t\t\t\t\t\t"));
+        //Arrange
+        string statement = "\t\t\t\t\t\t\t\t\t\t";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Fine. Be that way!", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Multiple_line_question()
     {
-        Assert.Equal("Whatever.", Bob.Response("\nDoes this cryogenic chamber make me look fat?\nNo."));
+        //Arrange
+        string statement = "\nDoes this cryogenic chamber make me look fat?\nNo.";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whatever.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Starting_with_whitespace()
     {
-        Assert.Equal("Whatever.", Bob.Response("         hmmmmmmm..."));
+        //Arrange
+        string statement = "         hmmmmmmm...";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whatever.", bobsResponse);
     }
 
     [Fact(Skip = "Remove to run test")]

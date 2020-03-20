@@ -22,7 +22,7 @@ public static class Bob
                     break;
 
                 case '?':
-                    if (statement == statement.ToUpper() && !statementContainsNoLetters(statement))
+                    if (statement == statement.ToUpper() && !StatementContainsNoLetters(statement))
                     {
                         bobsResponse = "Calm down, I know what I'm doing!";
                     }
@@ -34,7 +34,7 @@ public static class Bob
             }
         }
 
-        if (isStringEmpty(statement))
+        if (IsStringEmpty(statement))
         {
             bobsResponse = "Fine. Be that way!";
         }
@@ -42,7 +42,7 @@ public static class Bob
         {
             if (statement == statement.ToUpper())
             {
-                if (statementContainsNoLetters(statement))
+                if (StatementContainsNoLetters(statement))
                 {
                     bobsResponse = "Whatever.";
                 }
@@ -55,23 +55,18 @@ public static class Bob
         return bobsResponse;
     }
 
-    private static bool isStringEmpty(string statement)
+    private static bool IsStringEmpty(string statement)
     {
-        if (statement == "")
+        foreach (char statementCharacter in statement)
         {
-            return true;
+            if (statementCharacter != ' ' && statementCharacter != '\t')
+            {
+                return false;
+            }
         }
 
-        return false;
+        return true;
     }
 
-    private static bool statementContainsNoLetters(string statement)
-    {
-        if (statement.ToUpper() == statement.ToLower())
-        {
-            return true;
-        }
-
-        return false;
-    }
+    private static bool StatementContainsNoLetters(string statement) => statement.ToUpper() == statement.ToLower();
 }
