@@ -51,6 +51,10 @@ public static class Bob
                     bobsResponse = "Whoa, chill out!";
                 }
             }
+            else
+            {
+                bobsResponse = "Whatever.";
+            }
         }
         return bobsResponse;
     }
@@ -59,7 +63,7 @@ public static class Bob
     {
         foreach (char statementCharacter in statement)
         {
-            if (statementCharacter != ' ' && statementCharacter != '\t')
+            if (statementCharacter != ' ' && statementCharacter != '\t' && statementCharacter != '\n' && statementCharacter != '\r')
             {
                 return false;
             }
