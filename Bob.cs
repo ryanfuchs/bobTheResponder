@@ -19,6 +19,10 @@ public static class Bob
 
                 case '!':
                     bobsResponse = "Whoa, chill out!";
+                    if (statement != statement.ToUpper())
+                    {
+                        bobsResponse = "Whatever.";
+                    }
                     break;
 
                 case '?':

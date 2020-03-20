@@ -88,10 +88,18 @@ public class BobTests
         Assert.Equal("Sure.", bobsResponse);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Talking_forcefully()
     {
-        Assert.Equal("Whatever.", Bob.Response("Hi there!"));
+        //Arrange
+        string statement = "Hi there!";
+        string bobsResponse;
+
+        //Act
+        bobsResponse = Bob.Response(statement);
+
+        //Assert
+        Assert.Equal("Whatever.", bobsResponse);
     }
 
     [Fact]
