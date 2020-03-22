@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 using Microsoft.VisualBasic;
@@ -7,7 +8,7 @@ public static class Bob
 {
     public static string Response(string statement)
     {
-        string bobsResponse = "";
+        string bobsResponse = string.Empty;
 
         foreach (char statementCharacter in statement)
         {
@@ -26,6 +27,7 @@ public static class Bob
                     break;
 
                 case '?':
+                {
                     if (statement == statement.ToUpper() && !StatementContainsNoLetters(statement))
                     {
                         bobsResponse = "Calm down, I know what I'm doing!";
@@ -35,6 +37,7 @@ public static class Bob
                         bobsResponse = "Sure.";
                     }
                     break;
+                }
             }
         }
 
@@ -42,39 +45,24 @@ public static class Bob
         {
             bobsResponse = "Fine. Be that way!";
         }
-        else if(bobsResponse == "")
+        else if(bobsResponse == string.Empty)
         {
             if (statement == statement.ToUpper())
             {
-                if (StatementContainsNoLetters(statement))
-                {
-                    bobsResponse = "Whatever.";
-                }
-                else
-                {
-                    bobsResponse = "Whoa, chill out!";
-                }
+                bobsResponse = StatementContainsNoLetters(statement) ? "Whatever." : "Whoa, chill out!";
             }
             else
             {
                 bobsResponse = "Whatever.";
             }
         }
+
         return bobsResponse;
     }
 
-    private static bool IsStringEmpty(string statement)
-    {
-        foreach (char statementCharacter in statement)
-        {
-            if (statementCharacter != ' ' && statementCharacter != '\t' && statementCharacter != '\n' && statementCharacter != '\r')
-            {
-                return false;
-            }
-        }
+    private static bool IsStringEmpty(string statement) => statement.All(statementCharacter => statementCharacter == ' ' || !IsStringWhitespace(statementCharacter));
 
-        return true;
-    }
+    private static bool IsStringWhitespace(char statementCharacter) => statementCharacter != '\t' && statementCharacter != '\n' && statementCharacter != '\r';
 
     private static bool StatementContainsNoLetters(string statement) => statement.ToUpper() == statement.ToLower();
 }
